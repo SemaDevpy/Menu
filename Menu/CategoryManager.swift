@@ -11,8 +11,14 @@ import SwiftyJSON
 
 
 
+struct CategoryModel {
+    var categoryName : String
+    var categoryID : String
+}
+
+
 protocol CategoryManagerDelegate {
-    func didUpdateData(_ categoryManager : CategoryManager, categories : [String])
+    func didUpdateData(_ categoryManager : CategoryManager, categories : [CategoryModel])
     func didFailWithError(error : Error)
 }
 
@@ -23,7 +29,7 @@ struct CategoryManager {
     var delegate : CategoryManagerDelegate?
     
     let url =
-        "https://delivery-test.timelysoft.org:8051/api/restaurants/b91ffc3a-3f80-44f1-94a6-08d89a7c3de5/menu/categories"
+        "https://deliverycarbis-test.timelysoft.org:5096/api/Restaurants/c7b1a0d1-6928-4512-f859-08d8c13995d7/menu/categories"
     
     
     func fetchCategories(){
@@ -32,13 +38,14 @@ struct CategoryManager {
             case .success(let value):
                 let json = JSON(value)
                 
-                var arrayOfCategories = [String]()
+                var arrayOfCategories = [CategoryModel]()
                 
                 for (_, subjson) in json["data"]["categories"]{
-                    for (_, value) in subjson["categories"]{
-                        let category = value["name"].stringValue
-                        arrayOfCategories.append(category)
-                    }
+                    let category = subjson["name"].stringValue
+                    let id = subjson["id"].stringValue
+                    let newModel = CategoryModel(categoryName: category, categoryID: id)
+                    arrayOfCategories.append(newModel)
+                    
                 }
                 
                 self.delegate?.didUpdateData(self, categories: arrayOfCategories)
