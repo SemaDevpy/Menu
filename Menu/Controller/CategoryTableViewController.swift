@@ -40,6 +40,7 @@ class CategoryTableViewController: UITableViewController {
         let destinationVC = segue.destination as! DishesTableViewController
         if let indexPath = tableView.indexPathForSelectedRow{
             destinationVC.categoryID = categories[indexPath.row].categoryID
+            destinationVC.category = categories[indexPath.row].categoryName
         }
         
     }

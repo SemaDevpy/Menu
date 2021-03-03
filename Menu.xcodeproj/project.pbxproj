@@ -15,6 +15,7 @@
 		A235FB8525EE3A050069A2E3 /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A235FB8425EE3A050069A2E3 /* CategoryTableViewController.swift */; };
 		A235FB9825EE4F570069A2E3 /* CategoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A235FB9725EE4F570069A2E3 /* CategoryManager.swift */; };
 		A235FB9C25EF84C90069A2E3 /* DishesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A235FB9B25EF84C90069A2E3 /* DishesTableViewController.swift */; };
+		A235FBA125EF8A840069A2E3 /* DishManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A235FBA025EF8A840069A2E3 /* DishManager.swift */; };
 		C13999F31ACA7A202D3A34AB /* Pods_Menu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DF4C4DCFB1C66BFB9D557C5 /* Pods_Menu.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,7 @@
 		A235FB8425EE3A050069A2E3 /* CategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
 		A235FB9725EE4F570069A2E3 /* CategoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryManager.swift; sourceTree = "<group>"; };
 		A235FB9B25EF84C90069A2E3 /* DishesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishesTableViewController.swift; sourceTree = "<group>"; };
+		A235FBA025EF8A840069A2E3 /* DishManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishManager.swift; sourceTree = "<group>"; };
 		E890863FF885E8FBABB3F4C9 /* Pods-Menu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Menu.release.xcconfig"; path = "Target Support Files/Pods-Menu/Pods-Menu.release.xcconfig"; sourceTree = "<group>"; };
 		E9060686C016226F23F404EA /* Pods-Menu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Menu.debug.xcconfig"; path = "Target Support Files/Pods-Menu/Pods-Menu.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,15 +80,40 @@
 			children = (
 				A235FB6A25EE37A30069A2E3 /* AppDelegate.swift */,
 				A235FB6C25EE37A30069A2E3 /* SceneDelegate.swift */,
-				A235FB9725EE4F570069A2E3 /* CategoryManager.swift */,
-				A235FB8425EE3A050069A2E3 /* CategoryTableViewController.swift */,
-				A235FB9B25EF84C90069A2E3 /* DishesTableViewController.swift */,
-				A235FB7025EE37A30069A2E3 /* Main.storyboard */,
+				A235FBA325EF9B7E0069A2E3 /* Model */,
+				A235FBA525EF9B9B0069A2E3 /* Controller */,
+				A235FBA425EF9B8F0069A2E3 /* Views */,
 				A235FB7325EE37A70069A2E3 /* Assets.xcassets */,
 				A235FB7525EE37A70069A2E3 /* LaunchScreen.storyboard */,
 				A235FB7825EE37A70069A2E3 /* Info.plist */,
 			);
 			path = Menu;
+			sourceTree = "<group>";
+		};
+		A235FBA325EF9B7E0069A2E3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A235FB9725EE4F570069A2E3 /* CategoryManager.swift */,
+				A235FBA025EF8A840069A2E3 /* DishManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A235FBA425EF9B8F0069A2E3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A235FB7025EE37A30069A2E3 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A235FBA525EF9B9B0069A2E3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A235FB8425EE3A050069A2E3 /* CategoryTableViewController.swift */,
+				A235FB9B25EF84C90069A2E3 /* DishesTableViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		C2BB07E47D9B4765ED721E94 /* Frameworks */ = {
@@ -216,6 +243,7 @@
 				A235FB6D25EE37A30069A2E3 /* SceneDelegate.swift in Sources */,
 				A235FB9C25EF84C90069A2E3 /* DishesTableViewController.swift in Sources */,
 				A235FB8525EE3A050069A2E3 /* CategoryTableViewController.swift in Sources */,
+				A235FBA125EF8A840069A2E3 /* DishManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
