@@ -37,7 +37,7 @@ class CategoryTableViewController: UITableViewController {
         performSegue(withIdentifier: "goToDishes", sender: self)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destinationVC = segue.destination as! DishesTableViewController
+        let destinationVC = segue.destination as! DishesViewController
         if let indexPath = tableView.indexPathForSelectedRow{
             destinationVC.categoryID = categories[indexPath.row].categoryID
             destinationVC.category = categories[indexPath.row].categoryName

@@ -1,18 +1,16 @@
 //
-//  DishesTableViewController.swift
+//  DishesViewController.swift
 //  Menu
 //
-//  Created by Syimyk on 3/3/21.
+//  Created by Syimyk on 3/4/21.
 //
 
 import UIKit
 
-class DishesTableViewController: UITableViewController, DishManagerDelegate {
+class DishesViewController: UIViewController, DishManagerDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var tableView: UITableView!
     
-   
-    
-
     var dishManger = DishManager()
     var dishes = [DishModel]()
     var categoryID = ""
@@ -24,30 +22,33 @@ class DishesTableViewController: UITableViewController, DishManagerDelegate {
         dishManger.fetchCharacter(with: categoryID)
         navigationItem.backButtonTitle = ""
         title = category
+        tableView.dataSource = self
+        
     }
-
+    
     // MARK: - Table view data source
-
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+        
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dishes.count
     }
-
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell2", for: indexPath)
         cell.textLabel?.text = dishes[indexPath.row].name
-        cell.detailTextLabel?.text = "\(dishes[indexPath.row].price)c"  
+        cell.detailTextLabel?.text = "\(dishes[indexPath.row].price)c"
         return cell
     }
     
-//MARK: - DishManager Delegate
+    
+    
+    
+    //MARK: - DishManager Delegate
     
     
     func didUpdateDishes(_ dishManager: DishManager, dishes: [DishModel]) {
-            self.dishes = dishes
-            tableView.reloadData()
+        self.dishes = dishes
+        tableView.reloadData()
         
     }
     
@@ -55,5 +56,4 @@ class DishesTableViewController: UITableViewController, DishManagerDelegate {
         print(error.localizedDescription)
     }
     
-
 }
