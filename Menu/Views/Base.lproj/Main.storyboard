@@ -106,6 +106,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="LF0-PF-bOK"/>
                     <connections>
+                        <outlet property="tabBar" destination="IEr-qp-Eom" id="4hi-q4-kVa"/>
                         <outlet property="tableView" destination="RvL-s4-5zl" id="sQc-Hc-HBv"/>
                     </connections>
                 </viewController>

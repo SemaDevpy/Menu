@@ -1,20 +1,52 @@
 PODS:
   - Alamofire (5.2.2)
+  - MaterialComponents/Availability (123.0.0)
+  - MaterialComponents/BottomSheet (123.0.0):
+    - MaterialComponents/Elevation
+    - MaterialComponents/private/KeyboardWatcher
+    - MaterialComponents/private/Math
+    - MaterialComponents/ShadowElevations
+    - MaterialComponents/ShadowLayer
+    - MaterialComponents/ShapeLibrary
+    - MaterialComponents/Shapes
+  - MaterialComponents/Elevation (123.0.0):
+    - MaterialComponents/Availability
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+  - MaterialComponents/private/Application (123.0.0)
+  - MaterialComponents/private/Color (123.0.0):
+    - MaterialComponents/Availability
+  - MaterialComponents/private/KeyboardWatcher (123.0.0):
+    - MaterialComponents/private/Application
+  - MaterialComponents/private/Math (123.0.0)
+  - MaterialComponents/ShadowElevations (123.0.0)
+  - MaterialComponents/ShadowLayer (123.0.0):
+    - MaterialComponents/ShadowElevations
+  - MaterialComponents/ShapeLibrary (123.0.0):
+    - MaterialComponents/private/Math
+    - MaterialComponents/Shapes
+  - MaterialComponents/Shapes (123.0.0):
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+    - MaterialComponents/ShadowLayer
   - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
   - Alamofire
+  - MaterialComponents/BottomSheet
   - SwiftyJSON
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - MaterialComponents
     - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
+  MaterialComponents: 7a40e33dc8726359d12e667b74a4007d87e4abd4
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 12506a01eafadc15ee5fb369faf06dc1c45de8af
+PODFILE CHECKSUM: c699a9217626e05f98e493fb1466477162ad4b02
 
 COCOAPODS: 1.9.1
