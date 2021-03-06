@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MaterialComponents.MaterialBottomSheet
 
 class DishesViewController: UIViewController, DishManagerDelegate , UITabBarDelegate{
     
@@ -13,6 +14,7 @@ class DishesViewController: UIViewController, DishManagerDelegate , UITabBarDele
     @IBOutlet weak var tabBar: UITabBar!
     
 
+    
         
         
         
@@ -20,7 +22,7 @@ class DishesViewController: UIViewController, DishManagerDelegate , UITabBarDele
     var dishes = [DishModel]()
     var categoryID = ""
     var category = ""
-    var dishesInCart : [DishModel] = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +35,9 @@ class DishesViewController: UIViewController, DishManagerDelegate , UITabBarDele
         tabBar.delegate = self
     }
 
-        
+//    func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+//        present(CartViewController(), animated: true, completion: nil)
+//    }
       
 
     
@@ -71,7 +75,13 @@ extension DishesViewController : UITableViewDataSource, UITableViewDelegate{
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        dishesInCart.append(dishes[indexPath.row])
-        tabBar.items?.first?.badgeValue = "\(dishesInCart.count)"
+//        dishesInCart.append(dishes[indexPath.row])
+//        tabBar.items?.first?.badgeValue = "\(dishesInCart.count)"
+        
+        let bottomSheet: MDCBottomSheetController = MDCBottomSheetController(contentViewController: SheetViewController(dish: dishes[indexPath.row]))
+        
+        
+        
+        present(bottomSheet, animated: true, completion: nil)
     }
 }

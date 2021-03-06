@@ -60,6 +60,9 @@
                                         <imageReference key="image" image="cart.fill" catalog="system" symbolScale="large"/>
                                     </tabBarItem>
                                 </items>
+                                <connections>
+                                    <outlet property="delegate" destination="eq4-Ay-l6e" id="LVk-4Y-nLc"/>
+                                </connections>
                             </tabBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RvL-s4-5zl">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>

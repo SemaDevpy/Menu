@@ -16,6 +16,9 @@
 		A235FB9825EE4F570069A2E3 /* CategoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A235FB9725EE4F570069A2E3 /* CategoryManager.swift */; };
 		A235FBA125EF8A840069A2E3 /* DishManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A235FBA025EF8A840069A2E3 /* DishManager.swift */; };
 		A235FBA825F0A9CE0069A2E3 /* DishesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A235FBA725F0A9CE0069A2E3 /* DishesViewController.swift */; };
+		A28A15D025F2510400E3435F /* SheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28A15CE25F2510400E3435F /* SheetViewController.swift */; };
+		A28A15D125F2510400E3435F /* SheetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A28A15CF25F2510400E3435F /* SheetViewController.xib */; };
+		A28A15D425F34F3900E3435F /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28A15D325F34F3900E3435F /* CartViewController.swift */; };
 		C13999F31ACA7A202D3A34AB /* Pods_Menu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DF4C4DCFB1C66BFB9D557C5 /* Pods_Menu.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +35,9 @@
 		A235FB9725EE4F570069A2E3 /* CategoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryManager.swift; sourceTree = "<group>"; };
 		A235FBA025EF8A840069A2E3 /* DishManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishManager.swift; sourceTree = "<group>"; };
 		A235FBA725F0A9CE0069A2E3 /* DishesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishesViewController.swift; sourceTree = "<group>"; };
+		A28A15CE25F2510400E3435F /* SheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetViewController.swift; sourceTree = "<group>"; };
+		A28A15CF25F2510400E3435F /* SheetViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SheetViewController.xib; sourceTree = "<group>"; };
+		A28A15D325F34F3900E3435F /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		E890863FF885E8FBABB3F4C9 /* Pods-Menu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Menu.release.xcconfig"; path = "Target Support Files/Pods-Menu/Pods-Menu.release.xcconfig"; sourceTree = "<group>"; };
 		E9060686C016226F23F404EA /* Pods-Menu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Menu.debug.xcconfig"; path = "Target Support Files/Pods-Menu/Pods-Menu.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				A235FB7025EE37A30069A2E3 /* Main.storyboard */,
+				A28A15CF25F2510400E3435F /* SheetViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -112,6 +119,8 @@
 			children = (
 				A235FB8425EE3A050069A2E3 /* CategoryTableViewController.swift */,
 				A235FBA725F0A9CE0069A2E3 /* DishesViewController.swift */,
+				A28A15CE25F2510400E3435F /* SheetViewController.swift */,
+				A28A15D325F34F3900E3435F /* CartViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -183,6 +192,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A28A15D125F2510400E3435F /* SheetViewController.xib in Resources */,
 				A235FB7725EE37A70069A2E3 /* LaunchScreen.storyboard in Resources */,
 				A235FB7425EE37A70069A2E3 /* Assets.xcassets in Resources */,
 				A235FB7225EE37A30069A2E3 /* Main.storyboard in Resources */,
@@ -242,6 +252,8 @@
 				A235FB9825EE4F570069A2E3 /* CategoryManager.swift in Sources */,
 				A235FB6D25EE37A30069A2E3 /* SceneDelegate.swift in Sources */,
 				A235FBA825F0A9CE0069A2E3 /* DishesViewController.swift in Sources */,
+				A28A15D425F34F3900E3435F /* CartViewController.swift in Sources */,
+				A28A15D025F2510400E3435F /* SheetViewController.swift in Sources */,
 				A235FB8525EE3A050069A2E3 /* CategoryTableViewController.swift in Sources */,
 				A235FBA125EF8A840069A2E3 /* DishManager.swift in Sources */,
 			);
