@@ -30,7 +30,7 @@ class SheetViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         dish.text = dishModel.name
-        price.text = dishModel.price
+        price.text = "\(dishModel.price)c" 
     }
 
     

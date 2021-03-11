@@ -34,7 +34,7 @@
                         <action selector="addToCartPressed:" destination="-1" eventType="touchUpInside" id="o73-O3-Q1g"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="43S-yf-Zey">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="43S-yf-Zey">
                     <rect key="frame" x="314" y="44" width="80" height="62"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="62" id="7Cd-rB-DWM"/>
